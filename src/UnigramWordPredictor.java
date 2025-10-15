@@ -129,7 +129,12 @@ public class UnigramWordPredictor implements WordPredictor {
     List<String> potentialTokens = new ArrayList<>(neighborMap.get(context.getLast()));
     Random random = new Random();
     int tokenID = random.nextInt(potentialTokens.size());
-    return potentialTokens.get(tokenID);
+    if (potentialTokens.get(tokenID)!=null) {
+      return potentialTokens.get(tokenID);
+    } 
+    else { 
+      return null;
+    }
   }
   
   /**

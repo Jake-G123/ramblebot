@@ -44,7 +44,6 @@ public class LowercaseSentenceTokenizer implements Tokenizer {
         tokenList.add(inputText);
       }
     }
-    System.out.println(tokenList);
     return tokenList;
   }
 }
